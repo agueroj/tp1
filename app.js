@@ -33,6 +33,13 @@ function getCountryTranslatedName(isoCode, language){
  */
 function getCountriesBySubregion(subregion){
     //Complete with your code
+    var list = []
+    for(var k in countries) {
+        if(countries[k].subregion==subregion){
+            list.push(countries[k].name);
+        }
+     }
+     return list;
 }
 
 function main() {
@@ -46,7 +53,7 @@ function main() {
         '\n');
     console.log(
         '///// Ejercicio 3 /////\n',
-        getCountriesBySubregion('South America'),
+        getCountriesBySubregion('Australia and New Zealand'),
         '\n');
 
 }
